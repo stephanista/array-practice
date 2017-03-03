@@ -40,13 +40,39 @@
 </header>
 
 <section class="container">
-  <img src="http://appinventor.mit.edu/explore/sites/all/files/Teach/media/image_8_ball.jpg" alt="a magic 8 ball">
+  <img src="http://appinventor.mit.edu/explore/sites/all/files/Teach/media/image_8_ball.jpg" alt="a magic 8 ball" onclick="clicker('yes')">
 
   <div>
-    <form>
-      <!-- TODO: Add a text field and submit button, attach a form handler function -->
+    <form onsubmit="magicAnswer()" name="questionForm">
+      <label>What would you like to know? 
+        <input type="text" name="question">
+      </label>
+      <input type="submit" value="Ask!">
     </form>
+    
+        <form onsubmit="insertAnswer()" name="answerForm">
+      <label>What answer would you like to get sometimes? 
+        <input type="text" name="answer">
+      </label>
+      <input type="submit" value="Yeah!">
+    </form>
+    
+    <form onsubmit="removeAnswer()" name="removalForm">
+      What answer would you like to remove?
+      <label>yes
+        <input type="radio" name="remove" value="yes">
+      </label>
+      <label>no
+        <input type="radio" name="remove" value="no">
+      </label>
+      <label>only on full moons
+        <input type="radio" name="remove" value="only on full moons">
+      </label>
+      <input type="submit" value="Nope!">
+    </form>
+    
   </div>
+  
 </section>
 <script type="text/javascript" src="scripts.js"></script>
 </body>

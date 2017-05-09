@@ -1,4 +1,5 @@
 alert("WARNING YOU HAVE A VIRUS!")
+alert("just kidding hi grandma i love you")
 // TODO: Build an array of strings that could be answers to magic 8 ball type questions.
 var p = 10;
 var carter = "Lo";
